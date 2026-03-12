@@ -1,6 +1,6 @@
 # OpenClaw Skill Collection
 
-精选 OpenClaw 技能合集 - 搜索、生产、审核三大类热门技能
+精选 OpenClaw 技能合集 - 搜索、生产、审核、HR 四大类热门技能
 
 ---
 
@@ -50,6 +50,35 @@
 - 审核他人的技能
 - 评估技能质量
 - 识别技能缺陷
+
+---
+
+### 🧑‍💼 04-employee-interview-generator - HR 访谈类 ⭐
+
+| 技能名称 | 版本 | 功能说明 |
+|---------|------|---------|
+| **employee-interview-generator** | 2.0.0 | 互联网公司员工访谈提纲生成器 |
+
+**核心功能：**
+- 📝 支持 9 种访谈类型（入职/绩效/离职/晋升/职业发展/团队反馈/挽留/转岗/组织诊断）
+- 📁 支持文件上传分析（Excel/PDF/PPTX/Word/TXT）
+- 🔗 支持网页链接分析
+- 📝 腾讯文档集成
+
+**专业方法论支持：**
+| 方法论 | 适用场景 |
+|-------|---------|
+| 韦斯伯德六个盒子模型 | 组织诊断访谈 |
+| 推拉力理论 | 离职访谈 |
+| 冰山模型 | 招聘需求访谈 |
+| 吉尔伯特 BEM 模型 | 员工发展访谈 |
+| 职业锚理论 + GROW 模型 | 职业发展访谈 |
+
+**使用场景：**
+- HR 访谈提纲生成
+- 组织健康度诊断
+- 离职原因分析
+- 员工发展规划
 
 ---
 
@@ -105,7 +134,8 @@ skillhub install skill-reviewer-pro
 | Skill 搜索 | 3 | 3.1.0 |
 | Skill 生产 | 3 | 3.0.1 |
 | Skill 审核 | 3 | 4.1.1 |
-| **总计** | **9** | **10.2.2** |
+| HR 访谈 ⭐ | 1 | 2.0.0 |
+| **总计** | **10** | **12.2.2** |
 
 ---
 
@@ -122,6 +152,7 @@ skillhub install skill-reviewer-pro
 - fitcheck-skill-search: fitcheck 团队
 - skill-creator 系列：Anthropic/Operator 社区
 - skill-reviewer 系列：OpenClaw 社区
+- employee-interview-generator: tommyyang@tencent
 
 ---
 
