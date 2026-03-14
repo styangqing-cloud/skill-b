@@ -1,0 +1,696 @@
+# 员工访谈提纲生成器配置文件
+#
+# 作者: tommyyang@tencent
+# 版本: 3.0.0
+# 更新时间: 2026-03-14
+
+# ==================== 访谈类型配置 ====================
+interview_types:
+  - name: "入职访谈"
+    code: "ENTRY"
+    description: "新员工融入、试用期跟进"
+    duration_minutes: 30
+    methodology: "基础方法"
+    phases:
+      - phase: "开场"
+        duration: 5
+        description: "欢迎与目的说明"
+      - phase: "工作适应"
+        duration: 15
+        description: "工作内容、团队融入"
+      - phase: "总结"
+        duration: 10
+        description: "反馈与下一步计划"
+  
+  - name: "绩效访谈"
+    code: "PERFORMANCE"
+    description: "绩效评估、目标设定"
+    duration_minutes: 45
+    methodology: "BEM模型"
+    phases:
+      - phase: "开场"
+        duration: 5
+        description: "欢迎与目的说明"
+      - phase: "绩效回顾"
+        duration: 20
+        description: "目标达成、成果评估"
+      - phase: "改进建议"
+        duration: 15
+        description: "能力提升、发展计划"
+      - phase: "总结"
+        duration: 5
+        description: "总结与确认"
+  
+  - name: "离职访谈"
+    code: "RESIGNATION"
+    description: "离职原因了解"
+    duration_minutes: 60
+    methodology: "推拉力理论"
+    phases:
+      - phase: "开场"
+        duration: 5
+        description: "欢迎与目的说明"
+      - phase: "离职决策"
+        duration: 20
+        description: "推力、拉力、留任力分析"
+      - phase: "工作体验"
+        duration: 15
+        description: "团队反馈、职业发展"
+      - phase: "敏感问题"
+        duration: 15
+        description: "薪酬福利、上级关系"
+      - phase: "总结"
+        duration: 5
+        description: "建议与祝福"
+  
+  - name: "晋升访谈"
+    code: "PROMOTION"
+    description: "晋升评估、职级面谈"
+    duration_minutes: 60
+    methodology: "能力评估模型"
+    phases:
+      - phase: "开场"
+        duration: 5
+        description: "欢迎与目的说明"
+      - phase: "能力评估"
+        duration: 30
+        description: "专业能力、领导力"
+      - phase: "职业规划"
+        duration: 20
+        description: "发展路径、目标设定"
+      - phase: "总结"
+        duration: 5
+        description: "总结与确认"
+  
+  - name: "职业发展"
+    code: "CAREER_DEVELOPMENT"
+    description: "IDP制定、职业规划"
+    duration_minutes: 45
+    methodology: "职业锚+GROW模型"
+    phases:
+      - phase: "开场"
+        duration: 5
+        description: "欢迎与目的说明"
+      - phase: "目标设定"
+        duration: 15
+        description: "短期与长期目标"
+      - phase: "现状分析"
+        duration: 15
+        description: "能力差距、学习机会"
+      - phase: "行动计划"
+        duration: 10
+        description: "发展计划、资源需求"
+  
+  - name: "团队反馈"
+    code: "TEAM_FEEDBACK"
+    description: "团队氛围、管理反馈"
+    duration_minutes: 30
+    methodology: "团队诊断方法"
+    phases:
+      - phase: "开场"
+        duration: 5
+        description: "欢迎与目的说明"
+      - phase: "团队氛围"
+        duration: 15
+        description: "协作体验、文化感受"
+      - phase: "管理反馈"
+        duration: 10
+        description: "建议与期望"
+  
+  - name: "挽留访谈"
+    code: "RETENTION"
+    description: "核心员工挽留"
+    duration_minutes: 60
+    methodology: "推拉力理论"
+    phases:
+      - phase: "开场"
+        duration: 5
+        description: "欢迎与目的说明"
+      - phase: "离职原因"
+        duration: 20
+        description: "推力、拉力、留任力分析"
+      - phase: "挽留方案"
+        duration: 25
+        description: "提供条件、协商讨论"
+      - phase: "总结"
+        duration: 10
+        description: "确认与后续行动"
+  
+  - name: "转岗访谈"
+    code: "TRANSFER"
+    description: "内部转岗评估"
+    duration_minutes: 30
+    methodology: "职业锚理论"
+    phases:
+      - phase: "开场"
+        duration: 5
+        description: "欢迎与目的说明"
+      - phase: "转岗动机"
+        duration: 15
+        description: "转岗原因、期望"
+      - phase: "总结"
+        duration: 10
+        description: "评估与后续安排"
+  
+  - name: "组织诊断访谈"
+    code: "ORGANIZATION_DIAGNOSIS"
+    description: "基于韦斯伯德六盒模型"
+    duration_minutes: 90
+    methodology: "六盒模型"
+    phases:
+      - phase: "开场"
+        duration: 5
+        description: "欢迎与目的说明"
+      - phase: "目的诊断"
+        duration: 15
+        description: "组织目标、战略清晰度"
+      - phase: "结构诊断"
+        duration: 15
+        description: "组织架构、分工协作"
+      - phase: "关系诊断"
+        duration: 15
+        description: "团队关系、沟通协作"
+      - phase: "奖励诊断"
+        duration: 15
+        description: "激励机制、绩效考核"
+      - phase: "领导诊断"
+        duration: 15
+        description: "领导风格、决策机制"
+      - phase: "支持机制诊断"
+        duration: 10
+        description: "资源支持、系统工具"
+      - phase: "总结"
+        duration: 5
+        description: "汇总建议与改进计划"
+
+# ==================== 绩效权重配置 ====================
+performance_weights:
+  recent_1: 0.7  # 最近1次绩效权重70%
+  recent_2: 0.3  # 最近2次绩效权重30%
+  
+  # 绩效组合分析策略
+  analysis_strategies:
+    - pattern: ["Good", "Outstanding"]
+      interpretation: "上升期"
+      strategy: "肯定进步、鼓励持续"
+    
+    - pattern: ["Outstanding", "Outstanding"]
+      interpretation: "稳定高绩效"
+      strategy: "保留、激励、防流失"
+    
+    - pattern: ["Good", "Good"]
+      interpretation: "稳定中等绩效"
+      strategy: "维持、适度挑战"
+    
+    - pattern: ["Good", "Underperform"]
+      interpretation: "下降期"
+      strategy: "识别原因、提供支持"
+    
+    - pattern: ["Underperform", "Underperform"]
+      interpretation: "持续低绩效"
+      strategy: "PIP改进、考虑调整"
+
+# ==================== 职级体系配置 ====================
+# 专业职位类共5类: T(技术)、P(产品/专业)、S(销售)、M(市场/运营)、D(设计)
+# 专业职级从5级起步，分4档: 5-7(初级)、8-9(中级)、10-11(高级)、12+(资深/高管)
+# 管理职位类: L(管理)
+level_systems:
+  P序列:
+    description: "产品/专业职级"
+    ranges:
+      - level_range: "P5-P7"
+        name: "初级"
+        strategy_file: "references/level-based-strategy.md"
+        question_depth: "基础"
+        focus_areas:
+          - "工作适应"
+          - "基础技能"
+          - "团队融入"
+      
+      - level_range: "P8-P9"
+        name: "中级"
+        question_depth: "标准"
+        focus_areas:
+          - "专业能力"
+          - "项目经验"
+          - "协作能力"
+      
+      - level_range: "P10-P11"
+        name: "高级"
+        question_depth: "深入"
+        focus_areas:
+          - "专业影响力"
+          - "战略思维"
+          - "团队领导"
+      
+      - level_range: "P12+"
+        name: "资深专家"
+        question_depth: "战略"
+        focus_areas:
+          - "行业影响力"
+          - "战略制定"
+          - "组织影响"
+  
+  M序列:
+    description: "市场/运营职级"
+    ranges:
+      - level_range: "M5-M7"
+        name: "初级"
+        question_depth: "基础"
+        focus_areas:
+          - "运营执行"
+          - "市场推广"
+          - "数据分析"
+      
+      - level_range: "M8-M9"
+        name: "中级"
+        question_depth: "标准"
+        focus_areas:
+          - "市场策略"
+          - "运营管理"
+          - "跨部门协作"
+      
+      - level_range: "M10-M11"
+        name: "高级"
+        question_depth: "深入"
+        focus_areas:
+          - "品牌战略"
+          - "增长策略"
+          - "资源整合"
+      
+      - level_range: "M12+"
+        name: "市场/运营高管"
+        question_depth: "战略"
+        focus_areas:
+          - "商业模式"
+          - "增长战略"
+          - "行业影响"
+  
+  T序列:
+    description: "技术职级"
+    ranges:
+      - level_range: "T5-T7"
+        name: "初级"
+        question_depth: "基础"
+        focus_areas:
+          - "技术基础"
+          - "工程能力"
+          - "学习成长"
+      
+      - level_range: "T8-T9"
+        name: "中级"
+        question_depth: "标准"
+        focus_areas:
+          - "架构能力"
+          - "技术攻关"
+          - "系统设计"
+      
+      - level_range: "T10-T11"
+        name: "高级"
+        question_depth: "深入"
+        focus_areas:
+          - "技术战略"
+          - "技术决策"
+          - "技术影响"
+      
+      - level_range: "T12+"
+        name: "技术高管"
+        question_depth: "战略"
+        focus_areas:
+          - "技术愿景"
+          - "行业影响"
+          - "技术生态"
+  
+  S序列:
+    description: "销售职级"
+    ranges:
+      - level_range: "S5-S7"
+        name: "初级"
+        question_depth: "基础"
+        focus_areas:
+          - "销售技巧"
+          - "客户开发"
+          - "业绩达成"
+      
+      - level_range: "S8-S9"
+        name: "中级"
+        question_depth: "标准"
+        focus_areas:
+          - "大客户管理"
+          - "销售策略"
+          - "团队协作"
+      
+      - level_range: "S10-S11"
+        name: "高级"
+        question_depth: "深入"
+        focus_areas:
+          - "业务拓展"
+          - "战略合作"
+          - "团队管理"
+      
+      - level_range: "S12+"
+        name: "销售高管"
+        question_depth: "战略"
+        focus_areas:
+          - "商业模式"
+          - "增长战略"
+          - "组织管理"
+  
+  D序列:
+    description: "设计职级"
+    ranges:
+      - level_range: "D5-D7"
+        name: "初级"
+        question_depth: "基础"
+        focus_areas:
+          - "设计基础"
+          - "执行能力"
+          - "设计规范"
+      
+      - level_range: "D8-D9"
+        name: "中级"
+        question_depth: "标准"
+        focus_areas:
+          - "设计思维"
+          - "用户体验"
+          - "设计系统"
+      
+      - level_range: "D10-D11"
+        name: "高级"
+        question_depth: "深入"
+        focus_areas:
+          - "设计策略"
+          - "创新设计"
+          - "设计影响"
+      
+      - level_range: "D12+"
+        name: "设计高管"
+        question_depth: "战略"
+        focus_areas:
+          - "设计愿景"
+          - "行业影响"
+          - "设计文化"
+  
+  L序列:
+    description: "管理职级"
+    ranges:
+      - level_range: "L1-1/L1-2"
+        name: "基层管理"
+        question_depth: "基础"
+        focus_areas:
+          - "团队管理"
+          - "任务分配"
+          - "人员培养"
+      
+      - level_range: "L2-1/L2-2"
+        name: "中层管理"
+        question_depth: "标准"
+        focus_areas:
+          - "团队建设"
+          - "跨部门协作"
+          - "战略执行"
+      
+      - level_range: "L2-3"
+        name: "高层管理"
+        question_depth: "深入"
+        focus_areas:
+          - "组织管理"
+          - "战略规划"
+          - "变革管理"
+
+# ==================== 文件处理配置 ====================
+file_processing:
+  # 文件大小限制(字节)
+  size_limits:
+    excel: 10485760   # 10MB
+    pdf: 20971520     # 20MB
+    word: 10485760    # 10MB
+    pptx: 20971520    # 20MB
+    txt: 5242880      # 5MB
+  
+  # 支持的文件扩展名
+  supported_extensions:
+    - ".xlsx"
+    - ".xls"
+    - ".pdf"
+    - ".docx"
+    - ".doc"
+    - ".pptx"
+    - ".txt"
+  
+  # 信息提取字段
+  extract_fields:
+    - "name"
+    - "position"
+    - "department"
+    - "hire_date"
+    - "tenure_months"
+    - "performance_history"
+    - "core_projects"
+    - "capabilities"
+    - "achievements"
+
+# ==================== 强制校验配置 ====================
+hard_gate:
+  # 必填字段
+  required_fields:
+    - field: "interview_type"
+      name: "访谈类型"
+      description: "从8种访谈类型中选择"
+    
+    - field: "position"
+      name: "员工职级/职位"
+      description: "如P8、M6、T7等"
+    
+    - field: "purpose"
+      name: "访谈目的"
+      description: "明确本次访谈的主要目标"
+  
+  # 建议字段
+  recommended_fields:
+    - field: "resignation_type"
+      name: "离职类型"
+      description: "主动离职或被动离职(仅离职访谈需要)"
+    
+    - field: "performance_history"
+      name: "绩效历史"
+      description: "最近2-3次绩效评级"
+  
+  # 可选字段
+  optional_fields:
+    - "name"
+    - "department"
+    - "hire_date"
+    - "core_projects"
+    - "capabilities"
+    - "achievements"
+
+# ==================== 输出配置 ====================
+output:
+  # 支持的输出格式
+  formats:
+    - format: "markdown"
+      extension: ".md"
+      description: "Markdown格式,便于阅读和编辑"
+    
+    - format: "tencent_docs"
+      extension: ".doc"
+      description: "腾讯文档智能文档,支持协作编辑"
+    
+    - format: "word"
+      extension: ".docx"
+      description: "Word格式,便于正式文档"
+  
+  # 默认输出格式
+  default_format: "markdown"
+  
+  # 输出文件命名模板
+  filename_template: "{interview_type}-{position}-{timestamp}.md"
+
+# ==================== 进度反馈配置 ====================
+progress_tracking:
+  # 启用进度跟踪
+  enabled: true
+  
+  # 工作流程步骤
+  workflow_steps:
+    - step: 1
+      name: "收集信息"
+      description: "从文件或URL收集员工信息"
+    
+    - step: 2
+      name: "分析呈现"
+      description: "结构化展示员工信息,等待确认"
+    
+    - step: 3
+      name: "生成访谈思路"
+      description: "生成个性化访谈思路,等待确认"
+    
+    - step: 4
+      name: "生成完整提纲"
+      description: "生成包含开场、核心问题、敏感问题、总结的完整提纲"
+    
+    - step: 5
+      name: "输出优化"
+      description: "格式化输出,支持多种格式"
+
+# ==================== 错误处理配置 ====================
+error_handling:
+  # 错误码体系
+  error_codes:
+    HARD_GATE_001:
+      name: "强制校验失败"
+      message: "缺少核心信息"
+      suggestion: "请提供访谈类型、员工职级和访谈目的"
+    
+    FILE_SIZE_001:
+      name: "文件大小超限"
+      message: "上传的文件超过了大小限制"
+      suggestion: "请压缩文件或减少文件大小"
+    
+    FILE_TYPE_001:
+      name: "不支持的文件类型"
+      message: "上传的文件格式不支持"
+      suggestion: "支持的格式: Excel(.xlsx, .xls), PDF(.pdf), Word(.docx, .doc), PPTX(.pptx), TXT(.txt)"
+    
+    FILE_PARSE_001:
+      name: "文件解析失败"
+      message: "无法解析上传的文件"
+      suggestion: "请检查文件是否损坏或格式是否正确"
+    
+    URL_FETCH_001:
+      name: "URL访问失败"
+      message: "无法访问提供的URL"
+      suggestion: "请检查URL是否正确,是否有访问权限"
+    
+    TOOL_CALL_001:
+      name: "工具调用失败"
+      message: "外部工具调用失败"
+      suggestion: "请稍后重试或联系技术支持"
+  
+  # 重试配置
+  retry:
+    max_attempts: 3
+    backoff_seconds: 2
+
+# ==================== 敏感话题预警配置 ====================
+sensitive_topic_alerts:
+  topics:
+    - topic: "薪酬福利"
+      risk_signals:
+        - "薪酬不公"
+        - "薪酬偏低"
+        - "福利不足"
+      handling:
+        - "倾听并记录,不当场承诺"
+        - "告知会反馈给相关部门"
+        - "避免进行薪酬谈判"
+    
+    - topic: "上级矛盾"
+      risk_signals:
+        - "抱怨管理方式"
+        - "领导不公"
+        - "沟通不畅"
+      handling:
+        - "保持中立,了解事实"
+        - "不当场站队或评价"
+        - "记录关键事实,后续跟进"
+    
+    - topic: "离职倾向"
+      risk_signals:
+        - "有外部机会"
+        - "考虑离职"
+        - "不满意现状"
+      handling:
+        - "立即启动挽留评估"
+        - "了解真实原因和诉求"
+        - "评估挽留可能性"
+    
+    - topic: "竞对挖角"
+      risk_signals:
+        - "被其他公司联系"
+        - "收到offer"
+        - "有更好的机会"
+      handling:
+        - "不强求透露具体公司"
+        - "尊重员工隐私"
+        - "关注公司改进点"
+
+# ==================== 职业锚配置 ====================
+career_anchors:
+  anchors:
+    - anchor: "技术/职能型"
+      description: "追求在技术/专业领域达到高水平"
+      keywords: ["专业技术", "深度钻研", "专家", "技术攻关"]
+    
+    - anchor: "管理型"
+      description: "追求管理和领导角色"
+      keywords: ["团队管理", "领导力", "组织管理", "人员培养"]
+    
+    - anchor: "自主/独立型"
+      description: "追求自主性和独立性"
+      keywords: ["自主", "独立", "自由", "自我驱动"]
+    
+    - anchor: "安全/稳定型"
+      description: "追求工作稳定和安全"
+      keywords: ["稳定", "安全", "长期发展", "职业保障"]
+    
+    - anchor: "创业/创造型"
+      description: "追求创造和创新"
+      keywords: ["创业", "创新", "创造", "新业务"]
+    
+    - anchor: "服务/奉献型"
+      description: "追求为社会/他人服务"
+      keywords: ["服务", "奉献", "社会责任", "帮助他人"]
+    
+    - anchor: "纯挑战型"
+      description: "追求挑战和征服"
+      keywords: ["挑战", "征服", "突破", "超越"]
+    
+    - anchor: "生活方式型"
+      description: "追求平衡的生活方式"
+      keywords: ["工作生活平衡", "生活方式", "身心健康"]
+
+# ==================== 模板配置 ====================
+templates:
+  # 模板存储路径
+  storage_path: "templates/"
+  
+  # 模板版本管理
+  versioning:
+    enabled: true
+    max_versions: 5
+  
+  # 预设模板
+  preset_templates:
+    - name: "P8离职访谈模板"
+      interview_type: "RESIGNATION"
+      level_range: "P8-P9"
+      file: "templates/P8-resignation-template.md"
+    
+    - name: "M6晋升访谈模板"
+      interview_type: "PROMOTION"
+      level_range: "M6-M7"
+      file: "templates/M6-promotion-template.md"
+    
+    - name: "T7职业发展模板"
+      interview_type: "CAREER_DEVELOPMENT"
+      level_range: "T6-T7"
+      file: "templates/T7-career-template.md"
+
+# ==================== 其他配置 ====================
+other:
+  # 版本信息
+  version: "3.0.0"
+  
+  # 作者信息
+  author: "tommyyang@tencent"
+  
+  # 最后更新时间
+  last_updated: "2026-03-14"
+  
+  # 开源协议
+  license: "Apache-2.0"
+  
+  # 技能描述
+  description: "员工访谈提纲生成器 - 专为互联网公司HR设计"

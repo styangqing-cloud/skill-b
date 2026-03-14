@@ -68,12 +68,12 @@ mcporter call tencent-docs.create_smartcanvas_by_markdown --args '{
 
 ```
 员工访谈提纲 - [访谈类型] - [员工姓名] - [日期]
+```
 
 示例：
 - 员工访谈提纲 - 绩效面谈 - 张 XXX - 20250312
 - 员工访谈提纲 - 入职跟进 - 王 XXX - 20250312
 - 员工访谈提纲 - 离职面谈 - 赵 XXX - 20250312
-```
 
 ---
 
