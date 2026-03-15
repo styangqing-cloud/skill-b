@@ -1,6 +1,11 @@
 ---
 name: employee-interview-generator
 description: 这是一个员工访谈提纲生成器技能，专为互联网公司 HR 设计，支持8种访谈场景（入职、绩效、离职、晋升、职业发展、团队反馈、挽留、转岗），支持TPSMD五大专业职位类和L管理职位类的职级体系识别，能够自动分析员工信息并生成结构化访谈提纲。
+author: tommyyang@tencent
+github: https://github.com/styangqing-cloud
+license: Apache-2.0
+last_updated: 2026-03-15
+version: 3.0.0
 ---
 
 # 员工访谈提纲生成器
